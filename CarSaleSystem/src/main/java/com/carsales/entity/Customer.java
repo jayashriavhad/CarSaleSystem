@@ -38,11 +38,9 @@ public class Customer
 	@Column(name = "Email", length = 30)
 	private String email;
 	
-//	//one to many relationship
-//	@OneToMany(mappedBy = "Customer", cascade = CascadeType.ALL)
-//	//crate a List for car
-//	private List<CarSale> carSale ;
+	//one to many relationship
+	@OneToMany(mappedBy = "Customer", cascade = CascadeType.ALL)
+	//crate a List for car
+	private List<CarSale> carSale ;
 	
-	@OneToMany(mappedBy = "customerId", cascade = CascadeType.ALL)
-	private List<CarSale> carsale;
 }
