@@ -38,14 +38,9 @@ public class CarSale   //Entity class
 	private Integer price;
 	
 	//many to one relationship
-//	@ManyToOne
-//	@JoinColumn(name = "customerId")//join the column
-//	@JsonBackReference   //linkage between two field,parent and child role
-//	private Customer Customer;
-
-
 	@ManyToOne
-	@JoinColumn(name = "customerId")  //join the column
-	@JsonBackReference               //linkage between two field,parent and child role
-	private Customer customerId; 
+	@JoinColumn(name = "customerId")//join the column
+	@JsonBackReference   //linkage between two field,parent and child role
+	private Customer Customer;
+
 }
